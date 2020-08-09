@@ -10,9 +10,15 @@ import {
     useParams
 } from "react-router-dom";
 
+import {MainPage} from './main_page';
+
 class App extends React.Component {
     render () {
-        return <h1>Hello, world!</h1>;
+        return <Router>
+            <Switch>
+                <Route path={'/'} component={MainPage}/>
+            </Switch>
+        </Router>;
     }
 }
 
